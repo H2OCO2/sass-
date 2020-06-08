@@ -1,0 +1,73 @@
+$xy-green: #67c23a;
+$xy-green-focus: #85ce61;
+$xy-green-active: #5daf34;
+$xy-disabled-bgc: #f5f5f5;
+$xy-disabled-bc: #d9d9d9;
+
+.ant-btn-primary {
+    &.btn-green {
+        background-color: $xy-green;
+        border-color: $xy-green;
+        &:hover,
+        &:focus {
+            background-color: $xy-green-focus;
+            border-color: $xy-green-focus;
+        }
+        &:active,
+        &.active {
+            background-color: $xy-green-active;
+            border-color: $xy-green-active;
+        }
+    }
+}
+
+@mixin btn-green-style {
+    background-color: $xy-disabled-bgc;
+    border-color: $xy-disabled-bc;
+}
+.ant-btn-primary-disabled,
+.ant-btn-primary[disabled],
+.ant-btn-primary.disabled {
+    &.btn-green {
+        @include btn-green-style();
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            @include btn-green-style();
+        }
+    }
+}
+
+.ant-btn-background-ghost.ant-btn-primary {
+    &.btn-green {
+        color: $xy-green;
+        border-color: $xy-green;
+        &:hover,
+        &:focus {
+            color: $xy-green-focus;
+            border-color: $xy-green-focus;
+        }
+        &:active,
+        &.active {
+            color: $xy-green-active;
+            border-color: $xy-green-active;
+        }
+    }
+}
+
+.ant-btn-background-ghost {
+    &.ant-btn-primary-disabled,
+    &.ant-btn-primary[disabled],
+    &.ant-btn-primary.disabled {
+        &.btn-green {
+            @include btn-green-style();
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                @include btn-green-style();
+            }
+        }
+    }
+}

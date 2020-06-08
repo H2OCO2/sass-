@@ -1,0 +1,45 @@
+$xy-green: #e6a23c;
+$xy-green-focus: #ebb563;
+$xy-green-active: #cf9236;
+@import "./2.scss";
+
+@for $i from 1 to 10 {
+    .border-#{$i} {
+        border: #{$i}px solid hotpink;
+    }
+}
+
+$sp-size: 0;
+@while $sp-size<=30 {
+    .m-#{$sp-size} {
+        margin: 1px * $sp-size !important;
+    }
+    .m-t-#{$sp-size} {
+        margin-top: 1px * $sp-size !important;
+    }
+    .m-b-#{$sp-size} {
+        margin-bottom: 1px * $sp-size !important;
+    }
+    .m-l-#{$sp-size} {
+        margin-left: 1px * $sp-size !important;
+    }
+    .m-r-#{$sp-size} {
+        margin-right: 1px * $sp-size !important;
+    }
+    .p-#{$sp-size} {
+        padding: 1px * $sp-size !important;
+    }
+    .p-t-#{$sp-size} {
+        padding-top: 1px * $sp-size !important;
+    }
+    .p-b-#{$sp-size} {
+        padding-bottom: 1px * $sp-size !important;
+    }
+    .p-l-#{$sp-size} {
+        padding-left: 1px * $sp-size !important;
+    }
+    .p-r-#{$sp-size} {
+        padding-right: 1px * $sp-size !important;
+    }
+    $sp-size: $sp-size + 5;
+}
